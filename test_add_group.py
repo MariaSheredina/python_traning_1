@@ -6,7 +6,7 @@ class TestAddGroup(unittest.TestCase):
     def setUp(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
-    
+
     def test_add_grop(self):
         wd = self.wd
         self.open_home_page(wd)
@@ -65,14 +65,15 @@ class TestAddGroup(unittest.TestCase):
         try: self.wd.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
         return True
-    
+
     def is_alert_present(self):
         try: self.wd.switch_to_alert()
         except NoAlertPresentException as e: return False
         return True
-    
+
     def tearDown(self):
         self.wd.quit()
 
 if __name__ == "__main__":
     unittest.main()
+
