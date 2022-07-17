@@ -37,7 +37,7 @@ class TestAddGroup(unittest.TestCase):
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
     def open_group_page(self, wd):
-        wd.find_element_by_link_text("group page").click()
+        wd.find_element_by_link_text("groups").click()
 
     def create_group(self, wd, name, header, footer):
         # init group creation
@@ -56,10 +56,10 @@ class TestAddGroup(unittest.TestCase):
         wd.find_element_by_name("submit").click()
 
     def return_to_group_page(self, wd):
-        wd.find_element_by_link_text("group page").click()
+        wd.find_element_by_link_text("groups").click()
 
     def logout(self, wd):
-        wd.find_element_by_link_text("Logout").click()
+         wd.find_element_by_link_text("Logout").click()
 
     def is_element_present(self, how, what):
         try: self.wd.find_element(by=how, value=what)
