@@ -13,7 +13,7 @@ class TestAddGroup(unittest.TestCase):
         self.login(wd, username="admin", password="secret")
         self.open_group_page(wd)
         self.create_group(wd, name="fff", header="ttt", footer="hhh")
-        #self.return_to_group_page(wd)
+        self.return_to_group_page(wd)
         self.logout(wd)
 
     def test_add_empty_group(self):
@@ -22,7 +22,7 @@ class TestAddGroup(unittest.TestCase):
         self.login(wd, username="admin", password="secret")
         self.open_group_page(wd)
         self.create_group(wd, name="", header="", footer="")
-        #self.return_to_group_page(wd)
+        self.return_to_group_page(wd)
         self.logout(wd)
 
     def open_home_page(self, wd):
@@ -37,7 +37,7 @@ class TestAddGroup(unittest.TestCase):
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
     def open_group_page(self, wd):
-        wd.find_element_by_link_text("groups").click()
+        wd.find_element_by_link_text("group page").click()
 
     def create_group(self, wd, name, header, footer):
         # init group creation
