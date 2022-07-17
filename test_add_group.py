@@ -56,7 +56,7 @@ class TestAddGroup(unittest.TestCase):
         wd.find_element_by_name("submit").click()
 
     def return_to_group_page(self, wd):
-        wd.find_element_by_name("group page").click()
+        wd.find_element_by_link_text("group page").click()
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
