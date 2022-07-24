@@ -7,7 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
 
-class TestAddGroup(unittest.TestCase):
+class Test_Contact(unittest.TestCase):
     def setUp(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
@@ -23,10 +23,6 @@ class TestAddGroup(unittest.TestCase):
         self.return_to_group_page(wd)
         self.logout(wd)
 
------------------------------------------------------------------------
-
-
-
     def open_home_page(self, wd):
         wd.get("https://localhost/addressbook/edit.php")
 
@@ -38,7 +34,7 @@ class TestAddGroup(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
-    def open_group_page(self, wd):
+    def open_contact_page(self, wd):
         wd.find_element_by_link_text("add new").click()
 
     def create_contact(self, wd, contact):
