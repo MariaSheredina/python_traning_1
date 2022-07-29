@@ -8,12 +8,12 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest
 from contact import Contact
 
-class Test_Contact(unittest.TestCase):
+class TestContact(unittest.TestCase):
     def setUp(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
     
-    def test_metod(self):
+    def test_contact(self):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
@@ -63,10 +63,10 @@ class Test_Contact(unittest.TestCase):
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
         wd.find_element_by_name("bday").click()
-        Select(driver.find_element_by_name("bday")).select_by_visible_text(contact.bday)
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
         wd.find_element_by_xpath("//option[@value='4']").click()
         wd.find_element_by_name("bmonth").click()
-        Select(driver.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
+        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
         wd.find_element_by_xpath("//option[@value='December']").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
