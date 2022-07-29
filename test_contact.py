@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
+from contact import Contact
 
 class Test_Contact(unittest.TestCase):
     def setUp(self):
@@ -17,10 +18,8 @@ class Test_Contact(unittest.TestCase):
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
         self.open_contact_page(wd)
-        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova",
-                                        nickname="Mari", company="Company", address="NNovgorod",
-                                        mobile="9200150025", bday="5", bmonth="12", byear="2000"))
-        self.return_to_group_page(wd)
+        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday="5", bmonth="12", byear="2000"))
+        self.return_contact_page(wd)
         self.logout(wd)
 
     def open_home_page(self, wd):
@@ -63,7 +62,6 @@ class Test_Contact(unittest.TestCase):
         wb.find_element_by_name("mobile").click()
         wb.find_element_by_name("mobile").clear()
         wb.find_element_by_name("mobile").send_keys(contact.mobile)
-        wb.find_element_by_name("work").click()
         wb.find_element_by_name("bday").click()
         Select(driver.find_element_by_name("bday")).select_by_visible_text(contact.bday)
         wb.find_element_by_xpath("//option[@value='4']").click()
@@ -77,8 +75,7 @@ class Test_Contact(unittest.TestCase):
         # submit contact creation
         wd.find_element_by_name("submit").click()
 
-
-    def return_to_add_new_page(self, wd):
+    def return_contact_page(self, wd):
         wd.find_element_by_link_text("add new").click()
 
     def logout(self, wd):
