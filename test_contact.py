@@ -12,7 +12,7 @@ class TestContact(unittest.TestCase):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
-        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday=4, bmonth=12, byear=1981))
+        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday="4", bmonth="12", byear="1981"))
         self.return_contact_page(wd)
         self.logout(wd)
 
@@ -60,6 +60,7 @@ class TestContact(unittest.TestCase):
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").send_keys(contact.byear)
+        wd.find_element_by_name("submit").click()
 
     def return_contact_page(self, wd):
         wd.find_element_by_link_text("add new").click()

@@ -8,6 +8,6 @@ class Contact:
         self.company = company
         self.address = address
         self.mobile = mobile
-        self.mobile = bday
-        self.mobile = bmonth
-        self.mobile = byear
+        self.bday = bday
+        self.bmonth = bmonth
+        self.byear = byear
