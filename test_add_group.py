@@ -27,7 +27,7 @@ class TestAddGroup(unittest.TestCase):
         self.logout(wd)
 
     def open_home_page(self, wd):
-        wd.get("https://localhost/addressbook/group.php")
+        wd.get("https://localhost/addressbook")
 
     def login(self, wd, username, password):
         wd.find_element_by_name("user").click()

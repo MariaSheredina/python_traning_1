@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-from selenium import webdriver
-#from selenium.webdriver.common.by import By
-#from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import Select
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import NoAlertPresentException
-import unittest
 from contact import Contact
+from selenium import webdriver
+import unittest
 
 class TestContact(unittest.TestCase):
     def setUp(self):
@@ -17,7 +12,7 @@ class TestContact(unittest.TestCase):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
-        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025"))
+        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday=4, bmonth=12, byear=1981))
         self.return_contact_page(wd)
         self.logout(wd)
 
@@ -56,18 +51,15 @@ class TestContact(unittest.TestCase):
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
-        # init contact dr
-        #wd.find_element_by_name("bday").click()
-        #Select(wd.find_element_by_name("bday")).select_by_visible_text("4")
-        #wd.find_element_by_xpath("//option[@value='4']").click()
-        #wd.find_element_by_name("bmonth").click()
-        #Select(wd.find_element_by_name("bmonth")).select_by_visible_text("December")
-        #wd.find_element_by_xpath("//option[@value='December']").click()
-        #wd.find_element_by_name("byear").click()
-        #wd.find_element_by_name("byear").clear()
-        #wd.find_element_by_name("byear").send_keys("1981")
-        #wd.find_element_by_name("theform").click()
-        #wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        wd.find_element_by_name("bday").click()
+        wd.find_element_by_name("bday").click()
+        wd.find_element_by_name("bday").send_keys(contact.bday)
+        wd.find_element_by_name("bmonth").click()
+        wd.find_element_by_name("bmonth").click()
+        wd.find_element_by_name("bmonth").send_keys(contact.bmonth)
+        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").send_keys(contact.byear)
 
     def return_contact_page(self, wd):
         wd.find_element_by_link_text("add new").click()
@@ -80,10 +72,10 @@ class TestContact(unittest.TestCase):
         except NoSuchElementException as e: return False
         return True
 
-    #def is_alert_present(self):
-        #try: self.wd.switch_to_alert()
-        #except NoAlertPresentException as e: return False
-        #return True
+    def is_alert_present(self):
+        try: self.wd.switch_to_alert()
+        except NoAlertPresentException as e: return False
+        return True
 
     def tearDown(self):
         self.wd.quit()
