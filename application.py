@@ -1,8 +1,9 @@
-from selenium import webdriver
+from selenium.webdriver.firefox.webdriver import WebDriver
 
 class Application:
+
     def __init__(self):
-         self.wd = webdriver.Firefox()
+         self.wd = WebDriver()
          self.wd.implicitly_wait(30)
 
     def open_home_page(self):
@@ -51,4 +52,5 @@ class Application:
         wd.find_element_by_link_text("Logout").click()
 
     def dectroy(self):
+        wd = self.wd
         self.wd.quit()
