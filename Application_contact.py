@@ -27,6 +27,8 @@ class Application_contact:
      def create_contact(self, contact):
         wd = self.wd
         self.open_contact_page()
+        # init group creation
+        wd.find_element_by_name("new").click()
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()

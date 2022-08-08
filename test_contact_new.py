@@ -1,6 +1,6 @@
 import pytest
-from group import Group
-from application import Application_contact
+from contact import Contact
+from application_contact import Application_contact
 
 @pytest.fixture
 def app(request):
@@ -8,7 +8,7 @@ def app(request):
     request.addfinalizer(fixture.dectroy)
     return fixture
 
-def test_add_group(app):
+def test_add_contact(app):
     app.login(username="admin", password="secret")
     app.create_contact(Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday="4", bmonth="12", byear="1981"))
     app.logout()
