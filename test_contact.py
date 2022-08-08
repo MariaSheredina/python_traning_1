@@ -1,10 +1,10 @@
 import pytest
 from contact import Contact
-from application import Application
+from application import Application_contact
 
 @pytest.fixture
 def app(request):
-    fixture = Application()
+    fixture = Application_contact()
     request.addfinalizer(fixture.dectroy)
     return fixture
 
