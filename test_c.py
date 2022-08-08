@@ -6,7 +6,7 @@ from application import Application
 def app(request):
     fixture = Application()
     request.addfinalizer(fixture.dectroy)
-    return fixture2
+    return fixture
 
 def test_c(app):
     app.login(username="admin", password="secret")
