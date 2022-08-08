@@ -74,3 +74,4 @@ class Application_contact:
         wd = self.wd
         self.wd.quit()
 
+
