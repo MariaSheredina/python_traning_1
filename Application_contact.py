@@ -8,7 +8,7 @@ class Application_contact:
 
     def open_home_page(self):
         wd = self.wd
-        wd.get("https://localhost/addressbook.php")
+        wd.get("https://localhost/addressbook")
 
     def login(self, username, password):
         wd = self.wd
