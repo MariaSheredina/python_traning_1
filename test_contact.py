@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 import pytest
 from contact import Contact
 from application import Application
+
 
 @pytest.fixture
 def app(request):
@@ -8,7 +10,8 @@ def app(request):
     request.addfinalizer(fixture.dectroy)
     return fixture
 
-def test(app):
+
+def test_contact(app):
     app.login(username="admin", password="secret")
     app.create_contact(Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday="4", bmonth="12", byear="1981"))
     app.logout()

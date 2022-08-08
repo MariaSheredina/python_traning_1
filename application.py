@@ -1,5 +1,6 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 
+
 class Application:
 
     def __init__(self):
@@ -24,7 +25,7 @@ class Application:
         wd = self.wd
         wd.find_element_by_link_text("add new").click()
 
-     def create_contact(self, contact):
+    def create_contact(self, contact):
         wd = self.wd
         self.open_contact_page()
         # fill contact form
@@ -50,15 +51,11 @@ class Application:
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
         wd.find_element_by_name("bday").click()
-        wd.find_element_by_name("bday").clear()
         wd.find_element_by_name("bday").send_keys(contact.bday)
         wd.find_element_by_name("bmonth").click()
-        wd.find_element_by_name("bmonth").clear()
         wd.find_element_by_name("bmonth").send_keys(contact.bmonth)
         wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(contact.byear)
-        #wd.find_element_by_name("submit").click()
 
     def return_to_contact_page(self):
         wd = self.wd
