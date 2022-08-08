@@ -75,3 +75,4 @@ class Application_contact:
     def dectroy(self):
         wd = self.wd
         self.wd.quit()
+
