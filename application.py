@@ -40,7 +40,6 @@ class Application:
         wd.find_element_by_name("nickname").click()
         wd.find_element_by_name("nickname").clear()
         wd.find_element_by_name("nickname").send_keys(contact.nickname)
-        wd.find_element_by_name("title").click()
         wd.find_element_by_name("company").click()
         wd.find_element_by_name("company").clear()
         wd.find_element_by_name("company").send_keys(contact.company)
@@ -51,15 +50,15 @@ class Application:
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
         wd.find_element_by_name("bday").click()
-        wd.find_element_by_name("bday").click()
+        wd.find_element_by_name("bday").clear()
         wd.find_element_by_name("bday").send_keys(contact.bday)
         wd.find_element_by_name("bmonth").click()
-        wd.find_element_by_name("bmonth").click()
+        wd.find_element_by_name("bmonth").clear()
         wd.find_element_by_name("bmonth").send_keys(contact.bmonth)
         wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(contact.byear)
-        wd.find_element_by_name("submit").click()
+        #wd.find_element_by_name("submit").click()
 
     def return_to_contact_page(self):
         wd = self.wd
