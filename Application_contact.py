@@ -1,25 +1,18 @@
-# -*- coding: utf-8 -*-
-from contact import Contact
-from selenium import webdriver
-import unittest
+from selenium.webdriver.firefox.webdriver import WebDriver
 
-class TestContact(unittest.TestCase):
-    def setUp(self):
-        self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(30)
-    
-    def test_contact(self):
+class Application_contact:
+
+    def __init__(self):
+         self.wd = WebDriver()
+         self.wd.implicitly_wait(30)
+
+    def open_home_page(self):
         wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd, username="admin", password="secret")
-        self.create_contact(wd, Contact(firstname="Maria", middlename="Victorovna", lastname="Sidorova", nickname="Mari", company="Company", address="NNovgorod", mobile="9200150025", bday="4", bmonth="12", byear="1981"))
-        self.return_contact_page(wd)
-        self.logout(wd)
+        wd.get("https://localhost/addressbook.php")
 
-    def open_home_page(self, wd):
-        wd.get("https://localhost/addressbook/edit.php")
-
-    def login(self, wd, username, password):
+    def login(self, username, password):
+        wd = self.wd
+        self.open_home_page()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(username)
@@ -27,7 +20,13 @@ class TestContact(unittest.TestCase):
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
-    def create_contact(self, wd, contact):
+    def open_contact_page(self):
+        wd = self.wd
+        wd.find_element_by_link_text("add new").click()
+
+     def create_contact(self, contact):
+        wd = self.wd
+        self.open_contact_page()
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -62,24 +61,15 @@ class TestContact(unittest.TestCase):
         wd.find_element_by_name("byear").send_keys(contact.byear)
         wd.find_element_by_name("submit").click()
 
-    def return_contact_page(self, wd):
+    def return_to_contact_page(self):
+        wd = self.wd
         wd.find_element_by_link_text("add new").click()
 
-    def logout(self, wd):
-         wd.find_element_by_link_text("Logout").click()
+    def logout(self):
+        wd = self.wd
+        self.return_to_contact_page()
+        wd.find_element_by_link_text("Logout").click()
 
-    def is_element_present(self, how, what):
-        try: self.wd.find_element(by=how, value=what)
-        except NoSuchElementException as e: return False
-        return True
-
-    def is_alert_present(self):
-        try: self.wd.switch_to_alert()
-        except NoAlertPresentException as e: return False
-        return True
-
-    def tearDown(self):
+    def dectroy(self):
+        wd = self.wd
         self.wd.quit()
-
-if __name__ == "__main__":
-    unittest.main()
