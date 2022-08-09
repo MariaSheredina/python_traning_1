@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test metod</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://localhost/addressbook/group.php<datalist><option>https://localhost/addressbook/group.php</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=user<datalist><option>name=user</option><option>xpath=//input[@name='user']</option><option>xpath=//form[@id='LoginForm']/input</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[3]</option><option>xpath=//input</option><option>css=input[name="user"]</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>click</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td>secret</td>
+</tr>
+<tr><td>click</td><td>xpath=//input[@value='Login']<datalist><option>xpath=//input[@value='Login']</option><option>xpath=//form[@id='LoginForm']/input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[1]</option><option>xpath=//input[3]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=new<datalist><option>name=new</option><option>xpath=//input[@name='new']</option><option>xpath=//div[@id='content']/form/input</option><option>xpath=//div[4]/form/input</option><option>css=input[name="new"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=group_name<datalist><option>name=group_name</option><option>xpath=//input[@name='group_name']</option><option>xpath=//div[@id='content']/form/input</option><option>xpath=//div[4]/form/input</option><option>css=input[name="group_name"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=group_name<datalist><option>name=group_name</option><option>xpath=//input[@name='group_name']</option><option>xpath=//div[@id='content']/form/input</option><option>xpath=//div[4]/form/input</option><option>css=input[name="group_name"]</option></datalist></td><td>ftg</td>
+</tr>
+<tr><td>click</td><td>name=group_header<datalist><option>name=group_header</option><option>xpath=//textarea[@name='group_header']</option><option>xpath=//div[@id='content']/form/textarea</option><option>xpath=//textarea</option><option>css=textarea[name="group_header"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=group_header<datalist><option>name=group_header</option><option>xpath=//textarea[@name='group_header']</option><option>xpath=//div[@id='content']/form/textarea</option><option>xpath=//textarea</option><option>css=textarea[name="group_header"]</option></datalist></td><td>thyhg</td>
+</tr>
+<tr><td>click</td><td>name=group_footer<datalist><option>name=group_footer</option><option>xpath=//textarea[@name='group_footer']</option><option>xpath=//div[@id='content']/form/textarea[2]</option><option>xpath=//textarea[2]</option><option>css=textarea[name="group_footer"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=group_footer<datalist><option>name=group_footer</option><option>xpath=//textarea[@name='group_footer']</option><option>xpath=//div[@id='content']/form/textarea[2]</option><option>xpath=//textarea[2]</option><option>css=textarea[name="group_footer"]</option></datalist></td><td>hghf</td>
+</tr>
+<tr><td>click</td><td>name=submit<datalist><option>name=submit</option><option>xpath=//input[@name='submit']</option><option>xpath=//div[@id='content']/form/input[2]</option><option>xpath=//input[2]</option><option>css=input[name="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Logout<datalist><option>link=Logout</option><option>xpath=//a[contains(text(),'Logout')]</option><option>xpath=//a[@onclick='document.logout.submit();']</option><option>xpath=//div[@id='top']/form/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='(admin)'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='home'])[1]/preceding::a[3]</option><option>xpath=//*/text()[normalize-space(.)='Logout']/parent::*</option><option>xpath=//a[contains(@href, '#')]</option><option>xpath=//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>close</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=user<datalist><option>name=user</option><option>xpath=//input[@name='user']</option><option>xpath=//form[@id='LoginForm']/input</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[3]</option><option>xpath=//input</option><option>css=input[name="user"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=user<datalist><option>name=user</option><option>xpath=//input[@name='user']</option><option>xpath=//form[@id='LoginForm']/input</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[3]</option><option>xpath=//input</option><option>css=input[name="user"]</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>click</td><td>id=LoginForm<datalist><option>id=LoginForm</option><option>name=LoginForm</option><option>xpath=//form[@id='LoginForm']</option><option>xpath=//div[@id='content']/form</option><option>xpath=//form</option><option>css=#LoginForm</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td>secret</td>
+</tr>
+<tr><td>click</td><td>xpath=//input[@value='Login']<datalist><option>xpath=//input[@value='Login']</option><option>xpath=//form[@id='LoginForm']/input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[1]</option><option>xpath=//input[3]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=add new<datalist><option>link=add new</option><option>xpath=//a[contains(text(),'add new')]</option><option>xpath=//div[@id='nav']/ul/li[2]/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='home'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/following::a[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='groups'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='next birthdays'])[1]/preceding::a[2]</option><option>xpath=//*/text()[normalize-space(.)='add new']/parent::*</option><option>xpath=//a[contains(@href, 'edit.php')]</option><option>xpath=//li[2]/a</option><option>css=li.all &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td>Sheredina</td>
+</tr>
+<tr><td>click</td><td>name=middlename<datalist><option>name=middlename</option><option>xpath=//input[@name='middlename']</option><option>xpath=//div[@id='content']/form/input[4]</option><option>xpath=//input[4]</option><option>css=input[name="middlename"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=middlename<datalist><option>name=middlename</option><option>xpath=//input[@name='middlename']</option><option>xpath=//div[@id='content']/form/input[4]</option><option>xpath=//input[4]</option><option>css=input[name="middlename"]</option></datalist></td><td>Maria</td>
+</tr>
+<tr><td>click</td><td>name=lastname<datalist><option>name=lastname</option><option>xpath=//input[@name='lastname']</option><option>xpath=//div[@id='content']/form/input[5]</option><option>xpath=//input[5]</option><option>css=input[name="lastname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=theform<datalist><option>name=theform</option><option>xpath=//form[@name='theform']</option><option>xpath=//div[@id='content']/form</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Edit / add address book entry'])[1]/following::form[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='import'])[1]/following::form[1]</option><option>xpath=//div[4]/form</option><option>css=form[name="theform"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=lastname<datalist><option>name=lastname</option><option>xpath=//input[@name='lastname']</option><option>xpath=//div[@id='content']/form/input[5]</option><option>xpath=//input[5]</option><option>css=input[name="lastname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=lastname<datalist><option>name=lastname</option><option>xpath=//input[@name='lastname']</option><option>xpath=//div[@id='content']/form/input[5]</option><option>xpath=//input[5]</option><option>css=input[name="lastname"]</option></datalist></td><td>Sheredina</td>
+</tr>
+<tr><td>click</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=theform<datalist><option>name=theform</option><option>xpath=//form[@name='theform']</option><option>xpath=//div[@id='content']/form</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Edit / add address book entry'])[1]/following::form[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='import'])[1]/following::form[1]</option><option>xpath=//div[4]/form</option><option>css=form[name="theform"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=add new<datalist><option>link=add new</option><option>xpath=//a[contains(text(),'add new')]</option><option>xpath=//div[@id='nav']/ul/li[2]/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='home'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/following::a[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='groups'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='next birthdays'])[1]/preceding::a[2]</option><option>xpath=//*/text()[normalize-space(.)='add new']/parent::*</option><option>xpath=//a[contains(@href, 'edit.php')]</option><option>xpath=//li[2]/a</option><option>css=li.all &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=home<datalist><option>link=home</option><option>xpath=//a[contains(text(),'home')]</option><option>xpath=//div[@id='nav']/ul/li/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='(admin)'])[1]/following::a[4]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='add new'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='groups'])[1]/preceding::a[2]</option><option>xpath=//*/text()[normalize-space(.)='home']/parent::*</option><option>xpath=//a[contains(@href, './')]</option><option>xpath=//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=user<datalist><option>name=user</option><option>xpath=//input[@name='user']</option><option>xpath=//form[@id='LoginForm']/input</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[3]</option><option>xpath=//input</option><option>css=input[name="user"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=user<datalist><option>name=user</option><option>xpath=//input[@name='user']</option><option>xpath=//form[@id='LoginForm']/input</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[3]</option><option>xpath=//input</option><option>css=input[name="user"]</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>click</td><td>id=LoginForm<datalist><option>id=LoginForm</option><option>name=LoginForm</option><option>xpath=//form[@id='LoginForm']</option><option>xpath=//div[@id='content']/form</option><option>xpath=//form</option><option>css=#LoginForm</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=pass<datalist><option>name=pass</option><option>xpath=//input[@name='pass']</option><option>xpath=//form[@id='LoginForm']/input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[2]</option><option>xpath=//input[2]</option><option>css=input[name="pass"]</option></datalist></td><td>secret</td>
+</tr>
+<tr><td>click</td><td>xpath=//input[@value='Login']<datalist><option>xpath=//input[@value='Login']</option><option>xpath=//form[@id='LoginForm']/input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='User:'])[1]/following::input[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create account'])[1]/preceding::input[1]</option><option>xpath=//input[3]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=add new<datalist><option>link=add new</option><option>xpath=//a[contains(text(),'add new')]</option><option>xpath=//div[@id='nav']/ul/li[2]/a</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='home'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Address Book'])[1]/following::a[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='groups'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='next birthdays'])[1]/preceding::a[2]</option><option>xpath=//*/text()[normalize-space(.)='add new']/parent::*</option><option>xpath=//a[contains(@href, 'edit.php')]</option><option>xpath=//li[2]/a</option><option>css=li.all &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=firstname<datalist><option>name=firstname</option><option>xpath=//input[@name='firstname']</option><option>xpath=//div[@id='content']/form/input[3]</option><option>xpath=//input[3]</option><option>css=input[name="firstname"]</option></datalist></td><td>Maria</td>
+</tr>
+<tr><td>click</td><td>name=middlename<datalist><option>name=middlename</option><option>xpath=//input[@name='middlename']</option><option>xpath=//div[@id='content']/form/input[4]</option><option>xpath=//input[4]</option><option>css=input[name="middlename"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=middlename<datalist><option>name=middlename</option><option>xpath=//input[@name='middlename']</option><option>xpath=//div[@id='content']/form/input[4]</option><option>xpath=//input[4]</option><option>css=input[name="middlename"]</option></datalist></td><td>Victorovna</td>
+</tr>
+<tr><td>click</td><td>name=lastname<datalist><option>name=lastname</option><option>xpath=//input[@name='lastname']</option><option>xpath=//div[@id='content']/form/input[5]</option><option>xpath=//input[5]</option><option>css=input[name="lastname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=lastname<datalist><option>name=lastname</option><option>xpath=//input[@name='lastname']</option><option>xpath=//div[@id='content']/form/input[5]</option><option>xpath=//input[5]</option><option>css=input[name="lastname"]</option></datalist></td><td>Sheredina</td>
+</tr>
+<tr><td>click</td><td>name=nickname<datalist><option>name=nickname</option><option>xpath=//input[@name='nickname']</option><option>xpath=//div[@id='content']/form/input[6]</option><option>xpath=//input[6]</option><option>css=input[name="nickname"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=nickname<datalist><option>name=nickname</option><option>xpath=//input[@name='nickname']</option><option>xpath=//div[@id='content']/form/input[6]</option><option>xpath=//input[6]</option><option>css=input[name="nickname"]</option></datalist></td><td>Mari</td>
+</tr>
+<tr><td>click</td><td>name=title<datalist><option>name=title</option><option>xpath=//input[@name='title']</option><option>xpath=//div[@id='content']/form/input[8]</option><option>xpath=//input[8]</option><option>css=input[name="title"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=company<datalist><option>name=company</option><option>xpath=//input[@name='company']</option><option>xpath=//div[@id='content']/form/input[9]</option><option>xpath=//input[9]</option><option>css=input[name="company"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=company<datalist><option>name=company</option><option>xpath=//input[@name='company']</option><option>xpath=//div[@id='content']/form/input[9]</option><option>xpath=//input[9]</option><option>css=input[name="company"]</option></datalist></td><td>Bercut</td>
+</tr>
+<tr><td>click</td><td>name=address<datalist><option>name=address</option><option>xpath=//textarea[@name='address']</option><option>xpath=//div[@id='content']/form/textarea</option><option>xpath=//textarea</option><option>css=textarea[name="address"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=address<datalist><option>name=address</option><option>xpath=//textarea[@name='address']</option><option>xpath=//div[@id='content']/form/textarea</option><option>xpath=//textarea</option><option>css=textarea[name="address"]</option></datalist></td><td>NNovgorod</td>
+</tr>
+<tr><td>click</td><td>name=mobile<datalist><option>name=mobile</option><option>xpath=//input[@name='mobile']</option><option>xpath=//div[@id='content']/form/input[11]</option><option>xpath=//input[11]</option><option>css=input[name="mobile"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=mobile<datalist><option>name=mobile</option><option>xpath=//input[@name='mobile']</option><option>xpath=//div[@id='content']/form/input[11]</option><option>xpath=//input[11]</option><option>css=input[name="mobile"]</option></datalist></td><td>9200150925</td>
+</tr>
+<tr><td>click</td><td>name=work<datalist><option>name=work</option><option>xpath=//input[@name='work']</option><option>xpath=//div[@id='content']/form/input[12]</option><option>xpath=//input[12]</option><option>css=input[name="work"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=bday<datalist><option>name=bday</option><option>xpath=//select[@name='bday']</option><option>xpath=//div[@id='content']/form/select</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::select[4]</option><option>xpath=//select</option><option>css=select[name="bday"]</option></datalist></td><td></td>
+</tr>
+<tr><td>select</td><td>name=bday<datalist><option>name=bday</option><option>xpath=//select[@name='bday']</option><option>xpath=//div[@id='content']/form/select</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::select[4]</option><option>xpath=//select</option><option>css=select[name="bday"]</option></datalist></td><td>label=4</td>
+</tr>
+<tr><td>click</td><td>xpath=//option[@value='4']<datalist><option>xpath=//option[@value='4']</option><option>xpath=//div[@id='content']/form/select/option[6]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[6]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::option[6]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::option[41]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::option[87]</option><option>xpath=//*/text()[normalize-space(.)='4']/parent::*</option><option>xpath=//option[6]</option><option>css=option[value="4"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=bmonth<datalist><option>name=bmonth</option><option>xpath=//select[@name='bmonth']</option><option>xpath=//div[@id='content']/form/select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::select[3]</option><option>xpath=//select[2]</option><option>css=select[name="bmonth"]</option></datalist></td><td></td>
+</tr>
+<tr><td>select</td><td>name=bmonth<datalist><option>name=bmonth</option><option>xpath=//select[@name='bmonth']</option><option>xpath=//div[@id='content']/form/select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::select[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::select[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::select[3]</option><option>xpath=//select[2]</option><option>css=select[name="bmonth"]</option></datalist></td><td>label=December</td>
+</tr>
+<tr><td>click</td><td>xpath=//option[@value='December']<datalist><option>xpath=//option[@value='December']</option><option>xpath=//div[@id='content']/form/select[2]/option[13]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Birthday:'])[1]/following::option[46]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Homepage:'])[1]/following::option[46]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Anniversary:'])[1]/preceding::option[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Group:'])[1]/preceding::option[47]</option><option>xpath=//*/text()[normalize-space(.)='December']/parent::*</option><option>xpath=//select[2]/option[13]</option><option>css=option[value="December"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=byear<datalist><option>name=byear</option><option>xpath=//input[@name='byear']</option><option>xpath=//div[@id='content']/form/input[18]</option><option>xpath=//input[18]</option><option>css=input[name="byear"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=byear<datalist><option>name=byear</option><option>xpath=//input[@name='byear']</option><option>xpath=//div[@id='content']/form/input[18]</option><option>xpath=//input[18]</option><option>css=input[name="byear"]</option></datalist></td><td>1981</td>
+</tr>
+<tr><td>click</td><td>xpath=//div[@id='content']/form/input[21]<datalist><option>xpath=//div[@id='content']/form/input[21]</option><option>xpath=//input[21]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
