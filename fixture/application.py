@@ -75,6 +75,10 @@ class Application:
         wd = self.wd
         wd.find_element_by_link_text("add new").click()
 
+    def return_to_group_page(self):
+        wd = self.wd
+        wd.find_element_by_link_text("groups").click()
+
     def dectroy(self):
         wd = self.wd
         self.wd.quit()
