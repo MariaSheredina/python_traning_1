@@ -2,8 +2,6 @@
 import pytest
 from model.contact import Contact
 from fixture.application import Application
-from fixture.session import SessionHelper
-from fixture.contact import ContactHelper
 
 
 @pytest.fixture
