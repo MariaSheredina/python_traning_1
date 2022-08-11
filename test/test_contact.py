@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-##
 import pytest
 from model.contact import Contact
 from fixture.application import Application
@@ -10,6 +9,7 @@ def app(request):
     fixture = Application()
     request.addfinalizer(fixture.dectroy)
     return fixture
+
 
 def test_contact(app):
     app.session.login(username="admin", password="secret")
