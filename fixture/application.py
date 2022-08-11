@@ -1,13 +1,13 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
-##
+
 
 class Application:
 
     def __init__(self):
-         self.wd = WebDriver()
-         self.wd.implicitly_wait(30)
-         self.session = SessionHelper(self)
+        self.wd = WebDriver()
+        self.wd.implicitly_wait(30)
+        self.session = SessionHelper(self)
 
     def open_home_page(self):
         wd = self.wd
@@ -80,5 +80,4 @@ class Application:
         wd.find_element_by_link_text("groups").click()
 
     def dectroy(self):
-        wd = self.wd
         self.wd.quit()
