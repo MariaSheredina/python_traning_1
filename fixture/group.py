@@ -1,4 +1,4 @@
-#push_задание5
+# push_задание6
 class GroupHelper:
 
     def __init__(self, app):
@@ -30,3 +30,12 @@ class GroupHelper:
     def return_to_group_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
+
+    def delete_first_group(self):
+        wd = self.app.wd
+        self.open_group_page()
+        # select first group
+        wd.find_element_by_link_text("selected[]").click()
+        # submit deletion
+        wd.find_element_by_link_text("delete").click()
+        self.app.return_to_group_page()

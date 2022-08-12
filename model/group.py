@@ -1,4 +1,4 @@
-#push_задание5
+# push_задание6
 class Group:
 
     def __init__(self, name, header, footer):
