@@ -1,4 +1,5 @@
 # push_задание6
+
 class SessionHelper:
     def __init__(self, app):
         self.app = app
