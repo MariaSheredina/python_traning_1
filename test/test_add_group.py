@@ -1,11 +1,7 @@
 #push_задание6
 # -*- coding: utf-8 -*-
 
-import pytest
 from model.group import Group
-from fixture.application import Application
-from fixture.session import SessionHelper
-from fixture.group import GroupHelper
 
 def test_add_group(app):
     app.session.login(username="admin", password="secret")
