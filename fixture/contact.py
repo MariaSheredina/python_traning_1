@@ -45,11 +45,11 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-     # def del_first_contact(self):
-        # wd = self.app.wd
-        # self.open_contact_page()
-        # select first group
-        # wd.find_element_by_link_text("selected[]").click()
-        # submit deletion
-        # wd.find_element_by_link_text("delete").click()
-        # self.app.return_to_contact_page()
+    def del_first_contact(self):
+        wd = self.app.wd
+        self.open_contact_page()
+        select first group
+        wd.find_element_by_link_text("selected[]").click()
+        submit deletion
+        wd.find_element_by_link_text("delete").click()
+        self.app.return_to_contact_page()
