@@ -1,6 +1,5 @@
-# push_задание6
+# push_задание7
 # -*- coding: utf-8 -*-
-import pytest
 
 def test_del_group(app):
     app.session.login(username="admin", password="secret")

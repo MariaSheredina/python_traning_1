@@ -52,7 +52,21 @@ class ContactHelper:
     def del_first_contact(self):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_link_text("selected[]").click()
-        wd.find_element_by_link_text("delete").click()
-        self.accept_next_alert = True
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_name("delete").click()
+        # self.accept_next_alert = True
+        self.open_home_page()
+
+    def edit_first_contact(self, new_address):
+        wd = self.app.wd
+        self.open_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # edit
+        wd.find_element_by_name("Edit").click()
+        wd.find_element_by_name("address").click()
+        wd.find_element_by_name("address").clear()
+        wd.find_element_by_name("address").send_keys(new_address)
+        # submit group
+        wd.find_element_by_name("update").click()
         self.open_home_page()

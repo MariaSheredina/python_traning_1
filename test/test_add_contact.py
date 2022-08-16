@@ -1,4 +1,4 @@
-# push_задание6
+# push_задание7
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 
