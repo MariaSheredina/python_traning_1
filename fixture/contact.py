@@ -1,4 +1,4 @@
-#push_задание5
+# push_задание5
 class ContactHelper:
 
     def __init__(self, app):
@@ -35,7 +35,7 @@ class ContactHelper:
         wd.find_element_by_name("bmonth").send_keys(contact.bmonth)
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").send_keys(contact.byear)
-        self.app.return_to_contact_page()
+        # self.app.return_to_contact_page()
 
     def open_contact_page(self):
         wd = self.app.wd
@@ -48,8 +48,8 @@ class ContactHelper:
     def del_first_contact(self):
         wd = self.app.wd
         self.open_contact_page()
-        select first group
+        # select first group
         wd.find_element_by_link_text("selected[]").click()
-        submit deletion
+        # submit deletion
         wd.find_element_by_link_text("delete").click()
-        self.app.return_to_contact_page()
+        # self.app.return_to_contact_page()
