@@ -1,4 +1,4 @@
-# push_задание6
+# push_задание7
 import pytest
 from fixture.application import Application
 

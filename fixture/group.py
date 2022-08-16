@@ -1,4 +1,4 @@
-# push_задание6
+# push_задание7
 class GroupHelper:
 
     def __init__(self, app):
