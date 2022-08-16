@@ -1,8 +1,11 @@
 # push_задание7
+
 class ContactHelper:
 
     def __init__(self, app):
         self.app = app
+        self.verificationErrors = []
+        self.accept_next_alert = True
 
     def create_contact(self, contact):
         wd = self.app.wd
@@ -53,8 +56,8 @@ class ContactHelper:
         wd = self.app.wd
         self.open_home_page()
         wd.find_element_by_name("selected[]").click()
-        wd.find_element_by_name("delete").click()
-        # self.accept_next_alert = True
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        self.accept_next_alert = True
         self.open_home_page()
 
     def edit_first_contact(self, new_address):
@@ -63,7 +66,7 @@ class ContactHelper:
         # select first contact
         wd.find_element_by_name("selected[]").click()
         # edit
-        wd.find_element_by_name("Edit").click()
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
         wd.find_element_by_name("address").send_keys(new_address)
