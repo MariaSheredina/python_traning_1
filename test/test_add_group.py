@@ -8,3 +8,5 @@ def test_add_group(app):
     app.group.create_group(Group(name="fff", header="ttt", footer="hhh"))
     app.session.logout()
 
+
+
