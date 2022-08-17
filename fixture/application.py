@@ -1,4 +1,4 @@
-# push_задание7
+# урок3_2
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper

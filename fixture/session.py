@@ -1,4 +1,4 @@
-# push_задание7
+# урок3_2
 
 class SessionHelper:
     def __init__(self, app):
@@ -17,3 +17,4 @@ class SessionHelper:
     def logout(self):
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
+        self.app.dectroy()
