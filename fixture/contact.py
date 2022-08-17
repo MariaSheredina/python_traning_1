@@ -4,8 +4,6 @@ class ContactHelper:
 
     def __init__(self, app):
         self.app = app
-        self.verificationErrors = []
-        self.accept_next_alert = True
 
     def create_contact(self, contact):
         wd = self.app.wd
@@ -57,7 +55,7 @@ class ContactHelper:
         self.open_home_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
-        self.accept_next_alert = True
+        self.assertRegexpMatches(self.close_alert_and_get_its_text(), r"^Delete 1 addresses[\s\S]$")
         self.open_home_page()
 
     def edit_first_contact(self, new_address):
