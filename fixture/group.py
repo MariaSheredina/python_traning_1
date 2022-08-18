@@ -23,7 +23,6 @@ class GroupHelper:
         wd.find_element_by_name("submit").click()
         self.app.open.return_group_page()
 
-# type
     def change_field_value(self, field_name, text):
         wd = self.app.wd
         if text is not None:
