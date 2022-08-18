@@ -7,7 +7,7 @@ class ContactHelper:
 
     def create_contact(self, contact):
         wd = self.app.wd
-        self.app.open_contact_page()
+        self.app.open.contact_page()
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -37,19 +37,19 @@ class ContactHelper:
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").send_keys(contact.byear)
         wd.find_element_by_name("submit").click()
-        self.app.return_contact_page()
+        self.app.open.contact_page()
 
     def del_first_contact(self):
         wd = self.app.wd
-        self.app.open_home_page()
+        self.app.open.home_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to.alert.accept()
-        self.app.open_home_page()
+        self.app.open.home_page()
 
     def edit_first_contact(self, new_address):
         wd = self.app.wd
-        self.app.open_home_page()
+        self.app.open.home_page()
         # select first contact
         wd.find_element_by_name("selected[]").click()
         # edit
@@ -59,4 +59,4 @@ class ContactHelper:
         wd.find_element_by_name("address").send_keys(new_address)
         # submit group
         wd.find_element_by_name("update").click()
-        self.app.open_home_page()
+        self.app.open.home_page()
