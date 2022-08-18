@@ -31,7 +31,6 @@ class GroupHelper:
             wd.find_element_by_name(field_name).send_keys(text)
 
     def fill_group_form(self, group):
-        wd = self.app.wd
         self.change_field_value("group_name", group.name)
         self.change_field_value("group_header", group.header)
         self.change_field_value("group_footer", group.footer)
@@ -41,7 +40,7 @@ class GroupHelper:
         self.app.open.group_page()
         self.select_first_group()
         wd.find_element_by_name("edit").click()
-        self.fill_group_form(self, new_group_data)
+        self.fill_group_form(new_group_data)
         wd.find_element_by_name("update").click()
         self.app.open.return_group_page()
 
