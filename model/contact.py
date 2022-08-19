@@ -1,6 +1,6 @@
-# push_задание7
+# урок3_3
 class Contact:
-    def __init__(self, firstname, middlename, lastname, nickname, company, address, mobile, bday, bmonth, byear):
+    def __init__(self, firstname="None", middlename="None", lastname="None", nickname="None", company="None", address="None", mobile="None", bday="None", bmonth="None", byear="None"):
         self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname

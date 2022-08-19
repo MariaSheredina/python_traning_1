@@ -1,4 +1,4 @@
-# push_задание7
+# урок3_3
 # -*- coding: utf-8 -*-
 from model.group import Group
 

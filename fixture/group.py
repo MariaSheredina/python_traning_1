@@ -1,4 +1,5 @@
-# урок3_2
+# урок3_3
+
 class GroupHelper:
 
     def __init__(self, app):
@@ -6,7 +7,7 @@ class GroupHelper:
 
     def create_group(self, group):
         wd = self.app.wd
-        self.app.open.group_page()
+        self.app.open.groups_page()
         # init group creation
         wd.find_element_by_name("new").click()
         # fill group form
@@ -37,7 +38,7 @@ class GroupHelper:
 
     def modify_first_group(self, new_group_data):
         wd = self.app.wd
-        self.app.open.group_page()
+        self.app.open.groups_page()
         self.select_first_group()
         wd.find_element_by_name("edit").click()
         self.fill_group_form(new_group_data)
@@ -46,24 +47,16 @@ class GroupHelper:
 
     def del_first_group(self):
         wd = self.app.wd
-        self.app.open.group_page()
+        self.app.open.groups_page()
         self.select_first_group()
         # submit deletion
         wd.find_element_by_name("delete").click()
 
-    def edit_first_group(self, new_name):
-        wd = self.app.wd
-        self.app.open.group_page()
-        self.select_first_group()
-        # edit
-        wd.find_element_by_name("edit").click()
-        wd.find_element_by_name("group_name").click()
-        wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(new_name)
-        # submit group
-        wd.find_element_by_name("update").click()
-        self.app.open.return_group_page()
-
     def select_first_group(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
+
+    def count_group(self):
+        wd = self.app.wd
+        self.app.open.groups_page()
+        return len(wd.find_element_by_name("selected[]"))

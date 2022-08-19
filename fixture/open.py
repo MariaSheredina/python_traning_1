@@ -1,4 +1,4 @@
-# урок3_2
+# урок3_3
 
 class OpenHelper:
     def __init__(self, app):
@@ -8,7 +8,7 @@ class OpenHelper:
         wd = self.app.wd
         wd.get("https://localhost/addressbook")
 
-    def group_page(self):
+    def groups_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
 
@@ -23,4 +23,3 @@ class OpenHelper:
     def home_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-
