@@ -4,9 +4,8 @@ from model.group import Group
 
 
 def test_add_group(app):
-    app.session.login(username="admin", password="secret")
-    app.group.create_group(Group(name="Old", header="Old", footer="Old"))
-    app.session.logout()
+    app.group.create_group(Group(name="name_Old", header="header_Old", footer="footer_Old"))
 
-
+def test_add_group_empty(app):
+    app.group.create_group(Group(name="", header="", footer=""))
 

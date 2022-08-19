@@ -16,5 +16,13 @@ class Application:
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
 
-    def dectroy(self):
+    def is_valid(self):
+        try:
+            self.wd.current_url()
+            return True
+        except:
+            return False
+
+    def destroy(self):
+        wd = self.wd
         self.wd.quit()

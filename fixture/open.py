@@ -23,3 +23,4 @@ class OpenHelper:
     def home_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
+
