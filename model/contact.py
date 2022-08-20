@@ -1,4 +1,4 @@
-# урок3_3
+# задание9
 class Contact:
     def __init__(self, firstname="None", middlename="None", lastname="None", nickname="None", company="None", address="None", mobile="None", bday="None", bmonth="None", byear="None"):
         self.firstname = firstname
