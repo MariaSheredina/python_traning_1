@@ -1,4 +1,5 @@
 # урок3_3
+
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
@@ -20,9 +21,8 @@ class Application:
         try:
             self.wd.current_url()
             return True
-        except:
+        except():
             return False
 
     def destroy(self):
-        wd = self.wd
         self.wd.quit()
