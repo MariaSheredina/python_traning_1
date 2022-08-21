@@ -20,7 +20,7 @@ class Application:
         try:
             self.wd.current_url()
             return True
-        except():
+        except:
             return False
 
     def destroy(self):

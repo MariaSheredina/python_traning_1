@@ -30,13 +30,6 @@ class ContactHelper:
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
-        wd.find_element_by_name("bday").click()
-        wd.find_element_by_name("bday").send_keys(contact.bday)
-        wd.find_element_by_name("bmonth").click()
-        wd.find_element_by_name("bmonth").send_keys(contact.bmonth)
-        wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").send_keys(contact.byear)
-        wd.find_element_by_name("submit").click()
         self.app.open.contact_page()
 
     def change_field_value(self, field_name, text):
@@ -54,9 +47,6 @@ class ContactHelper:
         self.change_field_value("company", contact.company)
         self.change_field_value("address", contact.address)
         self.change_field_value("mobile", contact.mobile)
-        self.change_field_value("bday", contact.bday)
-        self.change_field_value("bmonth", contact.bmonth)
-        self.change_field_value("byear", contact.byear)
 
     def del_first_contact(self):
         wd = self.app.wd
@@ -68,9 +58,9 @@ class ContactHelper:
 
     def modify_first_contact(self, new_contact_data):
         wd = self.app.wd
-        self.app.open.contact_page()
+        self.app.open.home_page()
         self.select_first_contact()
-        wd.find_element_by_name("edit").click()
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
         self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
         self.app.open.home_page()
@@ -82,4 +72,4 @@ class ContactHelper:
     def count_contact(self):
         wd = self.app.wd
         self.app.open.home_page()
-        return len(wd.find_element_by_name("selected[]"))
+        return len(wd.find_elements_by_name("selected[]"))
