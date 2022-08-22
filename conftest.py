@@ -1,4 +1,4 @@
-# задание9
+# задание10
 import pytest
 import fixture
 
@@ -14,7 +14,7 @@ def app(request):
         fixture = Application()
         fixture.session.login(username="admin", password="secret")
     else:
-        if not fixture.is_valid:
+        if not fixture.is_valid():
             fixture = Application()
             fixture.session.ensure_loin(username="admin", password="secret")
     return fixture

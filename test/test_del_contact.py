@@ -1,4 +1,4 @@
-# задание9
+# задание10
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 

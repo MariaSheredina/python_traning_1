@@ -1,4 +1,4 @@
-# урок3_3
+# задание10
 
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
