@@ -30,6 +30,7 @@ class ContactHelper:
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
+        wd.find_element_by_name("submit").click()
         self.app.open.contact_page()
 
     def change_field_value(self, field_name, text):
