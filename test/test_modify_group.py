@@ -7,7 +7,7 @@ def test_modify_group(app):
     if app.group.count_group() == 0:
         app.group.create_group(Group(name="Old name", header="Old header", footer="Old header"))
     app.group.modify_first_group(Group(name="New name", header="New header", footer="New header"))
-
+    app.session.logout()
 
 def test_modify_group_name(app):
     if app.group.count_group() == 0:

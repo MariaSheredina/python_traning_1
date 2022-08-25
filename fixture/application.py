@@ -19,9 +19,9 @@ class Application:
 
     def is_valid(self):
         try:
-            self.wd.current_url()
+            self.wd.current_url
             return True
-        except():
+        except:
             return False
 
     def destroy(self):
