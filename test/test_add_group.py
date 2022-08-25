@@ -4,9 +4,9 @@ from model.group import Group
 
 
 def test_add_group(app):
-    app.group.create_group(Group(name="name_Old", header="header_Old", footer="footer_Old"))
-    app.session.logout()
+    old_groups = app.group.get_group_list()
+    app.group.create_group(Group(name="name1", header="header1", footer="footer1"))
+    new_groups = app.group.get_group_list()
+    assert len(old_groups) + 1 == len(new_groups)
 
-def test_add_group_empty(app):
-    app.group.create_group(Group(name="", header="", footer=""))
 

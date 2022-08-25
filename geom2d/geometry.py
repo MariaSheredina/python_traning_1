@@ -1,15 +1,28 @@
 
-# from geom2d import *
+from geom2d import *
 from geom2d.point import Point
 
+l = list(map(lambda i: Point(i, i*i), range(-5, 6)))
 
-l = [Point(i, i*i) for i in range(-5, 6)]
+# l2 = list(map(lambda p: Point(p.x, -p.y), l))
+l2 = list(filter(lambda p: p.x % 2 == 0, l))
 
-l2 = [Point(el.x, -el.y) for el in l]
+# for el in l:
+    # l2.append(Point(el.x, -el.y))
 
 print(l)
 print(l2)
 
+
+
+# -----------------------------------------------------------
+
+# l = [Point(i, i*i) for i in range(-5, 6)]
+
+# l2 = [Point(el.x, -el.y) for el in l]
+
+# print(l)
+# print(l2)
 
 # -----------------------------------------------------------
 
