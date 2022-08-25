@@ -30,6 +30,7 @@ class ContactHelper:
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
+        # submit group creation
         wd.find_element_by_name("submit").click()
         self.app.open.contact_page()
 
