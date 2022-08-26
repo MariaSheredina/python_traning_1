@@ -1,5 +1,6 @@
-# задание10
+# исправление для заданий 7,8
 # -*- coding: utf-8 -*-
+
 from model.contact import Contact
 
 

@@ -1,12 +1,9 @@
-# задание10
+# исправление для заданий 7,8
 # -*- coding: utf-8 -*-
-from model.group import Group
+from model.contact import Contact
 
 
-def test_add_group(app):
-    old_groups = app.group.get_group_list()
-    app.group.create_group(Group(name="name1", header="header1", footer="footer1"))
-    new_groups = app.group.get_group_list()
-    assert len(old_groups) + 1 == len(new_groups)
+def test_contact(app):
+    app.contact.create_contact(Contact(firstname="Maria", middlename="Vi", lastname="Bu", nickname="Mari", company="Company", address="NNovgorod", mobile="9200000000"))
 
 

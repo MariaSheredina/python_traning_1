@@ -1,4 +1,5 @@
-# задание10
+# исправление для заданий 7,8
+# -*- coding: utf-8 -*-
 
 class SessionHelper:
     def __init__(self, app):
@@ -18,7 +19,6 @@ class SessionHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
         wd.find_element_by_name("user")
-        self.app.destroy()
 
     def is_logged_in(self):
         wd = self.app.wd
