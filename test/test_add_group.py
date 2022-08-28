@@ -1,7 +1,6 @@
 # задание11
 # -*- coding: utf-8 -*-
 from model.group import Group
-from sys import maxsize
 
 
 def test_add_group(app):

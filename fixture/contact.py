@@ -1,5 +1,7 @@
-# исправление для заданий 7,8
+# задание11
 # -*- coding: utf-8 -*-
+
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -54,3 +56,15 @@ class ContactHelper:
         wd = self.app.wd
         self.app.open.home_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.app.open.contact_page()
+        list_contact = []
+        for element in wd.find_elements_by_css_selector("span.contact"):
+            # span.contact возможно по-другому называется
+            text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            # "selected[]" и "value" возможно по-другому называются
+            list_contact.append(Contact(firstname=text, id=id))
+        return list_contact

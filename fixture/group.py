@@ -1,4 +1,4 @@
-# исправление для заданий 7,8
+# задание11
 # -*- coding: utf-8 -*-
 
 from model.group import Group
