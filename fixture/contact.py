@@ -3,6 +3,7 @@
 
 from model.contact import Contact
 
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -59,12 +60,12 @@ class ContactHelper:
 
     def get_contact_list(self):
         wd = self.app.wd
-        self.app.open.contact_page()
+        self.app.open.home_page()
         list_contact = []
-        for element in wd.find_elements_by_css_selector("span.contact"):
-            # span.contact возможно по-другому называется
-            text = element.text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            # "selected[]" и "value" возможно по-другому называются
-            list_contact.append(Contact(firstname=text, id=id))
+        for element in wd.find_elements_by_name("entry"):
+            cells = element.find_elements_by_tag_name("td")
+            id = cells[0].find_element_by_name("selected[]").get_attribute("value")
+            ln = cells[1].text
+            fn = cells[2].text
+            list_contact.append(Contact(id=id, lastname=ln, firstname=fn))
         return list_contact
