@@ -5,7 +5,7 @@ from model.contact import Contact
 from random import randrange
 
 
-def test_modify_contact_lastname(app):
+def test_modify_contact_firstname(app):
     if app.contact.count_contact() == 0:
         app.contact.create_contact(Contact(firstname="Maria"))
     old_contact = app.contact.get_contact_list()

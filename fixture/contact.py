@@ -28,13 +28,25 @@ class ContactHelper:
         self.change_field_value("firstname", contact.firstname)
         self.change_field_value("middlename", contact.middlename)
         self.change_field_value("lastname", contact.lastname)
-        self.change_field_value("nickname", contact.nickname)
-        self.change_field_value("company", contact.company)
-        self.change_field_value("address", contact.address)
-        self.change_field_value("mobile", contact.mobile)
-
-    def del_first_contact(self):
-        self.delete_contact_by_index(0)
+        # self.change_field_value("nickname", contact.nickname)
+        # self.change_field_value("company", contact.company)
+        # self.change_field_value("address", contact.address)
+        # self.change_field_value("mobile", contact.mobile)
+        # self.change_field_value("work", contact.work)
+        # self.change_field_value("fax", contact.fax)
+        # self.change_field_value("email", contact.email)
+        # self.change_field_value("email2", contact.email2)
+        # self.change_field_value("email3", contact.email3)
+        # self.change_field_value("homepage", contact.homepage)
+        # self.change_field_1_value("bday", contact.bday)
+        # self.change_field_1_value("bmonth", contact.bmonth)
+        # self.change_field_value("byear", contact.byear)
+        # self.change_field_1_value("aday", contact.aday)
+        # self.change_field_1_value("amonth", contact.amonth)
+        # self.change_field_value("ayear", contact.ayear)
+        # self.change_field_value("address2", contact.address2)
+        # self.change_field_value("phone2", contact.phone2)
+        # self.change_field_value("notes", contact.notes)
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
@@ -45,26 +57,29 @@ class ContactHelper:
         self.app.open.home_page()
         self.contact_cache = None
 
-    def modify_first_contact(self):
-        self.modify_contact_by_index(0)
-
     def modify_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.app.open.home_page()
         self.select_contact_by_index(index)
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(new_contact_data)
         wd.find_element_by_name("update").click()
         self.app.open.home_page()
         self.contact_cache = None
 
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
+
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
 
-    def select_contact_by_index(self, index):
-        wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
+    def del_first_contact(self):
+        self.delete_contact_by_index(0)
 
     def count_contact(self):
         wd = self.app.wd

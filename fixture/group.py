@@ -31,9 +31,6 @@ class GroupHelper:
         self.change_field_value("group_header", group.header)
         self.change_field_value("group_footer", group.footer)
 
-    def modify_first_group(self):
-        self.modify_group_by_index(0)
-
     def modify_group_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.app.open.groups_page()
@@ -46,6 +43,9 @@ class GroupHelper:
 
     def del_first_group(self):
         self.delete_group_by_index(0)
+
+    def modify_first_group(self):
+        self.modify_group_by_index(0)
 
     def delete_group_by_index(self, index):
         wd = self.app.wd
