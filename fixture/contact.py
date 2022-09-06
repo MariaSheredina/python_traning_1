@@ -100,9 +100,10 @@ class ContactHelper:
                 id = cells[0].find_element_by_name("selected[]").get_attribute("value")
                 firstname = cells[1].text
                 lastname = cells[2].text
-                all_phones = cells[5].text.splitlines()
-                self.contact_cache.append(Contact(id=id, firstname=firstname, lastname=lastname, homephone=all_phones[0],
-                                                  mobilephone=all_phones[1], workphone=all_phones[2], secondaryphone=all_phones[3]))
+                all_phones = cells[5].text
+                # all_phones = cells[5].text.splitlines()
+                self.contact_cache.append(Contact(id=id, firstname=firstname, lastname=lastname, all_phones_from_home_page=all_phones))
+                # homephone=all_phones[0], mobilephone=all_phones[1], workphone=all_phones[2], secondaryphone=all_phones[3]
         return list(self.contact_cache)
 
     def open_contact_to_edit_by_index(self, index):
